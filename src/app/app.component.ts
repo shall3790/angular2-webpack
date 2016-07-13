@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component }            from '@angular/core';
+import { ROUTER_DIRECTIVES, RouterLink, RouterOutlet }    from '@angular/router';
+// directives: [RouterOutlet, RouterLink, ROUTER_DIRECTIVES] 
 
 let html = require('./app.component.html');
 
 @Component({
     selector: 'my-app',
     template: html,
-    // template: '<h1>My First Angular 2 App with WebPack!!</h1>'
-    directives: [ROUTER_DIRECTIVES]
+    directives: [RouterOutlet, RouterLink, ROUTER_DIRECTIVES]
 })
 export class AppComponent {
     pageTitle: string = 'Angular 2 - Webpack';
+
 }
