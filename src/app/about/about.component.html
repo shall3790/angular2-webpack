@@ -1,14 +1,18 @@
 <div>
     <h4>About</h4>
 </div>
-<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<alert type="info">Hello from ng2-bootstrap  {{ date.toDateString() }}</alert>
+  <div style="display:inline-block; min-height:290px;">
+    <datepicker [(ngModel)]="date" showWeeks="true"></datepicker>
+  </div>
+<!--<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   Link with href
-</a>
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+</a>-->
+<!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   Button with data-target
 </button>
 <div class="collapse" id="collapseExample">
   <div class="well">
     text
   </div>
-</div>
+</div>-->

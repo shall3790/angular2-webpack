@@ -9,16 +9,26 @@ require('zone.js/dist/zone');
 require('../../css/app.css');
 
 // require('bootstrap');
-
-import { bootstrap }            from '@angular/platform-browser-dynamic';
-import { AppComponent }         from './app.component';
-import { appRouterProviders }   from './app.routes';
+import {
+    disableDeprecatedForms,
+    provideForms
+}                                       from '@angular/forms';
+import {
+    LocationStrategy,
+    HashLocationStrategy
+}                                       from '@angular/common';
+import { bootstrap }                    from '@angular/platform-browser-dynamic';
+import { AppComponent }                 from './app.component';
+import { appRouterProviders }           from './app.routes';
 
 // import { enableProdMode }      from '@angular/core';
 
 // enableProdMode();
 
 bootstrap(AppComponent, [
-    appRouterProviders
+    disableDeprecatedForms(),
+    provideForms(),
+    appRouterProviders,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
 ])
 .catch(err => console.error(err));
