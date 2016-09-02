@@ -15,6 +15,6 @@ let html = require('./app.component.html');
     ]
 })
 export class AppComponent {
-    pageTitle: string = 'Angular 2 - Webpack';
+    pageTitle: string = 'Angular 2 - Webpack Test';
 
 }
