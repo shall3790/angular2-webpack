@@ -1,34 +1,16 @@
 import 'core-js/es6';
 import 'reflect-metadata';
 require('zone.js/dist/zone');
-// jquery
-// let $ = require('jquery');
 
-// css
-// require('../../css/bootstrap.css');
-require('../../css/app.css');
+// bring in electron for angular app
+// require('electron');
 
-// require('bootstrap');
-import {
-    disableDeprecatedForms,
-    provideForms
-}                                       from '@angular/forms';
-import {
-    LocationStrategy,
-    HashLocationStrategy
-}                                       from '@angular/common';
-import { bootstrap }                    from '@angular/platform-browser-dynamic';
-import { AppComponent }                 from './app.component';
-import { appRouterProviders }           from './app.routes';
+import 'jquery';
+require('../js/bootstrap.min.js');
 
-// import { enableProdMode }      from '@angular/core';
 
-// enableProdMode();
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-bootstrap(AppComponent, [
-    disableDeprecatedForms(),
-    provideForms(),
-    appRouterProviders,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
-])
-.catch(err => console.error(err));
+import { AppModule } from './app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
